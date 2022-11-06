@@ -10,7 +10,11 @@ A set of scripts to download and update Waves blockchain history data into a Pos
    ```
 2. Create `config.yml` file in the project, using `config.example.yml` for reference.
 
-3. In PostgreSQL, create empty database. 
+3. In PostgreSQL, create empty database. (All Tables)
+```bash
+wget https://github.com/mdmcoin/mdmcoin-blockchain-postgres-sync/blob/master/migrations/sql/20190917130306_initial_schema/up.sql
+
+```
 
 4. Set environment variable `MIGRATE` to `true` (or just run crawler like this: `MIGRATE=true npm run ...`), it will apply initial and all additional migrations to yours database.
 
