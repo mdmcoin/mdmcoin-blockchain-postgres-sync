@@ -36,6 +36,11 @@ run all up.sql files of this folder - https://github.com/mdmcoin/mdmcoin-blockch
    ```bash
    npm run updateComposite
    ```
+   or use SCREEN
+    ```bash
+   screen -d -m -S MDM-postgres-sync  node /mdmcoin-blockchain-postgres-sync/src/updateComposite/run.js
+   ```
+   
    This is a continuous script, so you may want to run it in the background. We recommend using some kind of process manager (e.g. `pm2`) to restart the process on crash.
 
 ## Migrations
